@@ -88,6 +88,7 @@ summary(AllTestPoints_i)
 
 #### Making a Grid Map of Maxent Predictions ####
 #create point map
+#"Enivormental_variables_gridpoints_TexasPandhandle.csv" to large to add to github please contact author directly if desired
 grid_csv <- read.csv("Enivormental_variables_gridpoints_TexasPanhandle.csv")
 
 prediction_1 <- predict(maxent_full, grid_csv)
@@ -426,4 +427,5 @@ combined_plot_with_title <- annotate_figure(
 combined_plot_with_title
 
 file_location <- "*"
+
 ggsave(filename = paste0(file_location, "combined_plots_with_title.jpg"), plot = combined_plot_with_title, width = 10, height = 12, dpi = 300)
